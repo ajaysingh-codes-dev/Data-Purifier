@@ -267,7 +267,7 @@ def main():
             clean_df = df
             fill_log = pd.DataFrame()
         output_file = "clean_data.xlsx"
-        with pd.ExcelWriter("data.xlsx") as writer:
+        with pd.ExcelWriter("clean_data.xlsx") as writer:
             clean_df.to_excel(writer, sheet_name="clean_data", index=False)
             incomplete_records.to_excel(writer, sheet_name="incomplete_records", index=False)
             duplicate_records.to_excel(writer, sheet_name="duplicate_records", index=False)
